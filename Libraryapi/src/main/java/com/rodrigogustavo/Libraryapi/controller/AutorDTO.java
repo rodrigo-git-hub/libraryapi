@@ -3,8 +3,10 @@ package com.rodrigogustavo.Libraryapi.controller;
 import com.rodrigogustavo.Libraryapi.domain.Autor;
 
 import java.time.LocalDate;
+import java.util.UUID;
 
 public record AutorDTO(
+        UUID id,
         String nome,
         LocalDate dataNascimento,
         String nacionalidade) {
