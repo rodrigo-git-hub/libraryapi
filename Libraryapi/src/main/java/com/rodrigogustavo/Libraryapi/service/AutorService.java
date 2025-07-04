@@ -46,4 +46,10 @@ public class AutorService {
         return repository.findAll();
     }
 
+    public void atualizar(Autor autor) {
+        if (autor.getId() == null){
+            throw new IllegalArgumentException("Autor não existe");
+        }
+        repository.save(autor);
+    }
 }
