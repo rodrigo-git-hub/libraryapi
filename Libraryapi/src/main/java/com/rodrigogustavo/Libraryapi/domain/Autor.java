@@ -35,7 +35,9 @@ public class Autor {
     @Column(length = 50, nullable = false)
     private String nacionalidade;
 
-    @OneToMany(mappedBy = "autor",cascade = CascadeType.ALL) //Esse atributo não existe no banco de dados, ao utilizar o oneToMany com o mappedBy, estamos apenas fazendo o relacionamento dentro do objeto indicando que varios livros podem pertencer a um autor. Com esse atributo podemos pela classe autor carregar uma lista de livros dele sem precisar carregar uma instancia da classe livros filtrando pelo autor
+    @OneToMany(mappedBy = "autor", fetch = FetchType.LAZY
+            //cascade = CascadeType.ALL
+    ) //Esse atributo não existe no banco de dados, ao utilizar o oneToMany com o mappedBy, estamos apenas fazendo o relacionamento dentro do objeto indicando que varios livros podem pertencer a um autor. Com esse atributo podemos pela classe autor carregar uma lista de livros dele sem precisar carregar uma instancia da classe livros filtrando pelo autor
    private List<Livro> livros;
 
     @CreatedDate //Anotado para registrar a data da criação
