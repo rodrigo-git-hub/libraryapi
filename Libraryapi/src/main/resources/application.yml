@@ -2,10 +2,14 @@ spring:
   application:
     name: Libraryapi
   datasource:
-    url: jdbc:postgresql://rodrigo-pc:5432/library
-    username: postgres
-    password: postgres
-    driver-class-name: org.postgresql.Driver
+#    url: jdbc:postgresql://rodrigo-pc:5432/library
+#    username: postgres
+#    password: postgres
+#    driver-class-name: org.postgresql.Driver
+    url: jdbc:h2:mem:testedb
+    username: sa
+    password:
+    driver-class-name: org.h2.Driver
   jpa:
     show-sql: true
     hibernate:
