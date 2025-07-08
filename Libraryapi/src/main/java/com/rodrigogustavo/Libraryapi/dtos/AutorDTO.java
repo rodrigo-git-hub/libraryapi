@@ -1,4 +1,4 @@
-package com.rodrigogustavo.Libraryapi.controller;
+package com.rodrigogustavo.Libraryapi.dtos;
 
 import com.rodrigogustavo.Libraryapi.domain.Autor;
 
